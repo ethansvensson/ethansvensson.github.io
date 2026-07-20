@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Ethan Svensson</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="site-name">Ethan Svensson</div>
+    <div class="nav-group">
+      <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Projects</h1>
+  <p class="lead">A few things I'm building and tinkering with outside of work.</p>
+
+  <div class="project">
+    <span class="status">Homelab</span>
+    <h3>Homelab</h3>
+    <p>I have a 3 Node Proxmox cluster with 3 ThinkCentre M93P Workstations.</p>
+    <p>Currently only running Immich in my homelab. I have more planned.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Ethan Svensson</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

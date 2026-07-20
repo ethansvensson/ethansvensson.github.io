@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Ethan Svensson</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="site-name">Ethan Svensson</div>
+    <div class="nav-group">
+      <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Page not found</h1>
+  <p class="lead">The page you're looking for doesn't exist or may have moved.</p>
+  <a class="button" href="index.html">Back to home</a>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Ethan Svensson</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
