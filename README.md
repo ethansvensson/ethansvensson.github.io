@@ -1,4 +1,4 @@
-# 1arts.github.io
+# ethansvensson.github.io
 Testing github pages
 
 Github hosts the files index.html and style.css
