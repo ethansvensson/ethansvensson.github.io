@@ -28,13 +28,13 @@ Most developer portfolios stop at the work page. Wanderer is built around the id
 Use this template with the Astro CLI:
 
 ```sh
-npm create astro@latest -- --template <your-username>/astro-wanderer
+npm create astro@latest -- --template igagansingh/astro-wanderer
 ```
 
 Or clone it directly:
 
 ```sh
-git clone https://github.com/<your-username>/astro-wanderer.git
+git clone https://github.com/igagansingh/astro-wanderer.git
 cd astro-wanderer
 npm install
 npm run dev

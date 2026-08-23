@@ -43,9 +43,9 @@ export const site = {
   /** Shown in the hero and footer. Delete a line to remove it from both places.
    *  `icon` is any name from src/components/Icon.astro */
   socials: {
-    github: { url: 'https://github.com/yourusername', label: 'GitHub', icon: 'github' },
-    linkedin: { url: 'https://www.linkedin.com/in/yourusername/', label: 'LinkedIn', icon: 'linkedin' },
-    instagram: { url: 'https://www.instagram.com/yourusername', label: 'Instagram', icon: 'instagram' },
+    github: { url: 'https://github.com', label: 'GitHub', icon: 'github' },
+    linkedin: { url: 'https://www.linkedin.com', label: 'LinkedIn', icon: 'linkedin' },
+    instagram: { url: 'https://www.instagram.com', label: 'Instagram', icon: 'instagram' },
     email: { url: 'mailto:hello@example.com', label: 'Email', icon: 'email' },
     rss: { url: '/rss.xml', label: 'RSS', icon: 'rss' },
   } satisfies Record<string, SocialLink>,

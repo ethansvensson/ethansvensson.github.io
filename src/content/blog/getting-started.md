@@ -44,4 +44,4 @@ Create `src/content/trips/japan-2026.md` with a title, place, date, summary, a h
 
 ## Delete this post
 
-Once you've written something real, delete this file. Good luck — and if this theme saved you an afternoon, consider [starring the repo](https://github.com/yourusername/astro-wanderer).
+Once you've written something real, delete this file. Good luck — and if this theme saved you an afternoon, consider [starring the repo](https://github.com/igagansingh/astro-wanderer).
