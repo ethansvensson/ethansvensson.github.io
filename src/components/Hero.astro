@@ -15,13 +15,11 @@ const lastName = nameParts.join(' ');
     <div>
       <p class="hero-greeting">Hello, I'm</p>
       <h1>{firstName} {lastName && <span class="accent">{lastName}</span>}</h1>
-      <p class="hero-typed">
-        <span class="typed" id="typed-roles" data-roles={rolesJson}></span><span class="typed-cursor" aria-hidden="true">▍</span>
-      </p>
 
       <p class="hero-bio">
-        Write a short bio here — who you are, what you build, what you're
-        curious about. Two or three sentences is plenty.
+        Resourceful and curious IT professional with 3+ years of experience in IT support, systems administration, and infrastructure operations. 
+        Experienced in identifying recurring issues, implementing process improvements, automation opportunities to improve service reliability. 
+        Adaptable to fast-paced, high-growth environments.
       </p>
 
       <div class="social-row">
@@ -34,7 +32,7 @@ const lastName = nameParts.join(' ');
       </div>
     </div>
 
-    <img class="hero-avatar" src={withBase('/img/avatar.svg')} alt={`Portrait of ${site.author.name}`} width="220" height="220" />
+    <img class="hero-avatar" src={withBase('/img/avatar.jpg')} alt={`Portrait of ${site.author.name}`} width="220" height="220" />
   </div>
 </section>
 

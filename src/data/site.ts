@@ -25,28 +25,27 @@ export interface SocialLink {
  */
 export const site = {
   /** Your full name — used for <title> and meta tags */
-  title: 'Rowan Hale',
+  title: 'Ethan Svensson',
   /** Short handle used after the dot in page titles ("About · rowanhale") */
-  shortTitle: 'rowanhale',
+  shortTitle: 'ethansvensson',
   /** Default meta description for pages that don't set their own */
   description:
-    'Software engineer and occasional traveler — writing about code and sharing photos from the road.',
+    'IT Professional.',
   /** Your production URL — no trailing slash. Used for canonical URLs, OG tags, RSS and sitemap */
-  url: 'https://example.com',
+  url: 'https://ethansvensson.com',
   author: {
-    name: 'Rowan Hale',
-    email: 'hello@example.com',
-    location: 'Portland, OR',
+    name: 'Ethan Svensson',
+    email: 'etsven02@gmail.com',
     /** Optional: link to a PDF résumé served from /public */
     resume: '/resume/Resume.pdf',
   },
   /** Shown in the hero and footer. Delete a line to remove it from both places.
    *  `icon` is any name from src/components/Icon.astro */
   socials: {
-    github: { url: 'https://github.com', label: 'GitHub', icon: 'github' },
-    linkedin: { url: 'https://www.linkedin.com', label: 'LinkedIn', icon: 'linkedin' },
-    instagram: { url: 'https://www.instagram.com', label: 'Instagram', icon: 'instagram' },
-    email: { url: 'mailto:hello@example.com', label: 'Email', icon: 'email' },
+    github: { url: 'https://github.com/ethansvensson', label: 'GitHub', icon: 'github' },
+    linkedin: { url: 'https://www.linkedin.com/in/ethansvensson/', label: 'LinkedIn', icon: 'linkedin' },
+    instagram: { url: 'https://www.instagram.com/ethansvenssonn/', label: 'Instagram', icon: 'instagram' },
+    email: { url: 'mailto:etsven02@gma.com', label: 'Email', icon: 'email' },
     rss: { url: '/rss.xml', label: 'RSS', icon: 'rss' },
   } satisfies Record<string, SocialLink>,
 };
