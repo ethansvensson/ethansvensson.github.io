@@ -8,6 +8,6 @@ export default defineConfig({
   site: 'https://example.com',
   // Set this to your site's subpath if it is NOT hosted at the domain root
   // (e.g. GitHub Pages project sites). Delete this line if your site lives at "/".
-  base: '/astro-wanderer',
+  // base: '/astro-wanderer',
   integrations: [sitemap()],
 });
