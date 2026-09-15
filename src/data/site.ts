@@ -35,7 +35,7 @@ export const site = {
   url: 'https://ethansvensson.com',
   author: {
     name: 'Ethan Svensson',
-    email: 'etsven02@gmail.com',
+    email: '',
     /** Optional: link to a PDF résumé served from /public */
     resume: '/resume/Resume.pdf',
   },
@@ -45,7 +45,7 @@ export const site = {
     github: { url: 'https://github.com/ethansvensson', label: 'GitHub', icon: 'github' },
     linkedin: { url: 'https://www.linkedin.com/in/ethansvensson/', label: 'LinkedIn', icon: 'linkedin' },
     instagram: { url: 'https://www.instagram.com/ethansvenssonn/', label: 'Instagram', icon: 'instagram' },
-    email: { url: 'mailto:etsven02@gma.com', label: 'Email', icon: 'email' },
+    email: { url: 'mailto:', label: 'Email', icon: 'email' },
     rss: { url: '/rss.xml', label: 'RSS', icon: 'rss' },
   } satisfies Record<string, SocialLink>,
 };
