@@ -1,7 +1,6 @@
 ---
 import Layout from '../../components/Layout.astro';
 import Icon from '../../components/Icon.astro';
-import Gallery from '../../components/Gallery.astro';
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { site, withBase } from '../../data/site';
@@ -69,13 +68,6 @@ const jsonLd = {
       <div class="prose" style="margin-top: 1rem;">
         <Content />
       </div>
-
-      {trip.data.gallery.length > 0 && (
-        <>
-          <h2 style="margin-top: 3rem;">Gallery</h2>
-          <Gallery items={trip.data.gallery.map(withBase)} title={trip.data.title} />
-        </>
-      )}
 
       <nav aria-label="Trip navigation" style="margin-top: 3rem;">
         <a href={withBase('/travel')}><Icon name="arrow-left" size={14} /> Back to all trips</a>
