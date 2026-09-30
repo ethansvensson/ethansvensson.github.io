@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../data/site';
+
+type Projects = CollectionEntry<'projects'>;
+
+interface Props {
+  project: Projects;
+}
+
+const { project } = Astro.props;
+const dateFmt = new Intl.DateTimeFormat('en-US', { year: 'numeric' });
+---
+
+<article>
+  <a class="project-card" href={withBase(`/projects/${project.id}/`)}>
+    <div class="thumb">
+    
+      <img src={withBase(project.data.heroImage)} alt={project.data.title} loading="lazy" />
+    </div>
+    <div class="body">
+      <span class="meta">{project.data.place} · {dateFmt.format(project.data.date)}</span>
+      <h3>{project.data.title}</h3>
+      <p>{project.data.summary}</p>
+    </div>
+  </a>
+</article>

@@ -1,0 +1,77 @@
+---
+import Layout from '../../components/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { site, withBase } from '../../data/site';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
+}
+
+type Props = { project: CollectionEntry<'projects'> };
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+const dateFmt = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long' });
+const heroImage = withBase(project.data.heroImage);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: project.data.title,
+  description: project.data.summary,
+  datePublished: project.data.date.toISOString(),
+  author: { '@type': 'Person', name: site.author.name },
+  image: `${site.url}${heroImage}`,
+};
+---
+
+<Layout
+  title={project.data.title}
+  description={project.data.summary}
+  type="article"
+  image={project.data.heroImage}
+  jsonLd={jsonLd}
+>
+  <article class="section">
+    <div class="container">
+      <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+        <a href={withBase('/projects')}><Icon name="arrow-left" size={14} /> All projects</a>
+      </nav>
+
+      <header style="max-width: 70ch;">
+        <div class="post-meta">
+          <span class="category-badge life">project</span>
+          <span>{project.data.place}</span>
+          <span class="dot">·</span>
+          <time datetime={project.data.date.toISOString()}>{dateFmt.format(project.data.date)}</time>
+        </div>
+        <h1 style="margin: 0.75rem 0 0.5rem;">{project.data.title}</h1>
+        <p class="muted" style="font-size: 1.1rem;">{project.data.summary}</p>
+      </header>
+
+      <img
+        src={heroImage}
+        alt={project.data.title}
+        style="border-radius: var(--radius-lg); margin: 2rem 0; width: 100%; object-fit: cover; max-height: 480px;"
+      />
+      
+      {project.data.highlights.length > 0 && (
+        <ul class="badge-row" style="list-style: none; padding: 0; margin: 0 0 1.5rem;">
+          {project.data.highlights.map((h) => <li class="badge">✦ {h}</li>)}
+        </ul>
+      )}
+
+      <div class="prose" style="margin-top: 1rem;">
+        <Content />
+      </div>
+
+      <nav aria-label="Projects navigation" style="margin-top: 3rem;">
+        <a href={withBase('/projects')}><Icon name="arrow-left" size={14} /> Back to all projects</a>
+      </nav>
+    </div>
+  </article>
+</Layout>
