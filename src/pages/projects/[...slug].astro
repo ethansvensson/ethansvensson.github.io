@@ -53,17 +53,18 @@ const jsonLd = {
         <p class="muted" style="font-size: 1.1rem;">{project.data.summary}</p>
       </header>
 
-      <img
-        src={heroImage}
-        alt={project.data.title}
-        style="border-radius: var(--radius-lg); margin: 2rem 0; width: 100%; object-fit: cover; max-height: 480px;"
-      />
-      
       {project.data.highlights.length > 0 && (
         <ul class="badge-row" style="list-style: none; padding: 0; margin: 0 0 1.5rem;">
           {project.data.highlights.map((h) => <li class="badge">✦ {h}</li>)}
         </ul>
       )}
+
+      <img
+        src={heroImage}
+        alt={project.data.title}
+        style="border-radius: var(--radius-lg); margin: 2rem 0; width: 100%; object-fit: cover; max-height: 140px;"
+      />
+      
 
       <div class="prose" style="margin-top: 1rem;">
         <Content />
