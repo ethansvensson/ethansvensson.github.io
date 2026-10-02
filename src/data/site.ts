@@ -46,7 +46,6 @@ export const site = {
     linkedin: { url: 'https://www.linkedin.com/in/ethansvensson/', label: 'LinkedIn', icon: 'linkedin' },
     instagram: { url: 'https://www.instagram.com/ethansvenssonn/', label: 'Instagram', icon: 'instagram' },
     email: { url: 'mailto:', label: 'Email', icon: 'email' },
-    rss: { url: '/rss.xml', label: 'RSS', icon: 'rss' },
   } satisfies Record<string, SocialLink>,
 };
 

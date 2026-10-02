@@ -1,0 +1,32 @@
+---
+import Layout from '../../components/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+import { withBase } from '../../data/site';
+
+const projects = (await getCollection('projects')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout
+  title="Projects"
+  description="Short list of my projects, click on them for further details."
+>
+  <section class="section">
+    <div class="container">
+      <div class="project-head">
+        <div>
+          <p class="eyebrow">Projects</p>
+          <h1>What I'm working on</h1>
+        </div>
+      </div>
+
+      {projects.length > 0 ? (
+        <div class="project-grid" style="margin-top: 2.5rem;">
+          {projects.map((t) => <ProjectCard project={t} />)}
+        </div>
+      ) : (
+        <p class="muted" style="margin-top: 2rem;">Short list of my projects, click on them for further details</p>
+      )}
+    </div>
+  </section>
+</Layout>
